@@ -1,0 +1,250 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"align",
+				"align-content"
+			],
+			[
+				"githu",
+				"Github"
+			],
+			[
+				"height",
+				"max-height"
+			],
+			[
+				"backround",
+				"background-image"
+			],
+			[
+				"HITS",
+				"hits_higher"
+			],
+			[
+				"contas",
+				"containsEdge"
+			],
+			[
+				"edg",
+				"containsEdge"
+			],
+			[
+				"contains",
+				"containsEdge"
+			],
+			[
+				"g",
+				"Graph"
+			],
+			[
+				"Nu",
+				"number_count"
+			],
+			[
+				"bit",
+				"bit_length"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/justi/Desktop/website_express/app.js",
+		"/C/Users/justi/Desktop/Website/index.htm",
+		"/C/Users/justi/Desktop/Website/server.js",
+		"/C/Users/justi/Desktop/Website/blog.htm",
+		"/C/Users/justi/Desktop/Website/db.js",
+		"/C/Users/justi/Desktop/Website/website_express/views/index.jade",
+		"/C/Users/justi/Desktop/Website/website_express/package.json",
+		"/C/Users/justi/Desktop/Website/website_express/routes/index.js",
+		"/C/Users/justi/Desktop/Website/style.css",
+		"/C/Users/justi/Desktop/Website/aboutme.htm",
+		"/C/Users/justi/Desktop/Website/JioPersonalWebsite.htm",
+		"/C/Users/justi/Desktop/Nodejs/app.js",
+		"/C/Users/justi/Desktop/Nodejs/server.js",
+		"/C/Users/justi/Desktop/Nodejs/myfirst.js",
+		"/C/Users/justi/Desktop/Nodejs/demo_create_table.js",
+		"/C/Users/justi/Desktop/Nodejs/demo_create_db.js",
+		"/C/Users/justi/Desktop/Nodejs/demo_db_connection.js",
+		"/C/Users/justi/Desktop/Nodejs/node_modules/mysql/Readme.md",
+		"/C/Users/justi/Downloads/node_modules/mysql/Readme.md",
+		"/C/Users/justi/Downloads/node_modules/mysql/License",
+		"/C/Users/justi/Desktop/Nodejs/node_modules/mysql/lib/ConnectionConfig.js",
+		"/C/Users/justi/Desktop/Nodejs/node_modules/mysql/lib/PoolConfig.js",
+		"/C/Users/justi/Desktop/Nodejs/node_modules/mysql/lib/protocol/sequences/ChangeUser.js",
+		"/C/Users/justi/Desktop/Nodejs/node_modules/mysql/lib/protocol/Auth.js",
+		"/C/Users/justi/Desktop/Nodejs/node_modules/mysql/lib/Connection.js",
+		"/C/Users/justi/Desktop/Website/style_about.css",
+		"/C/Users/justi/Desktop/Website/example.htm",
+		"/C/Users/justi/Desktop/Website/website.html.txt",
+		"/C/Users/justi/Desktop/cloudflare/segmenterlru.py",
+		"/C/Users/justi/Desktop/Jobstuff/Codes/ereader.py",
+		"/C/Users/justi/Desktop/Jobstuff/Codes/graph2.py",
+		"/C/Users/justi/Desktop/Jobstuff/Codes/graph.py",
+		"/C/Users/justi/Desktop/Jobstuff/Challenges/test_Scalable_JioCalderon.py",
+		"/C/Users/justi/Desktop/Jobstuff/Challenges/Scalable_JioCalderon.py",
+		"/C/Users/justi/Desktop/Jobstuff/Play/Monsterbase.py",
+		"/C/Users/justi/Desktop/Jobstuff/Play/Monsterbase",
+		"/C/Users/justi/Desktop/Jobstuff/Codes/trap_water.py",
+		"/C/Users/justi/Desktop/Jobstuff/Codes/interview_q.py"
+	],
+	"find":
+	{
+		"height": 52.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 52.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "app.sublime-project",
+	"replace":
+	{
+		"height": 96.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 394.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

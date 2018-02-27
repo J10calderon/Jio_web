@@ -1,0 +1,34 @@
+extends layout
+block content
+  body
+    .navbar
+      a(href='/home' id = 'Home') Jio
+      a(href='/files/JioCalderonResume.pdf' id = 'Resume') Resume
+      a(href='/about' id = 'About') About
+      a(href='/blog' id = 'Blog') Blog
+      a(href='https://github.com/J10calderon' id = 'Github') Github
+      a(href='https://www.linkedin.com/in/jio-calderon-2782b8156/' id = 'Linkedin') LinkedIn
+    #blogtext
+      h1 Blog
+      p.
+       More stuff by me.
+    h2 Make a post
+    form(name="makepost", method="post", class = "addform", action = "/blog")
+        div.input
+            textarea(type="body", name="title", cols="40", rows="1", placeholder="Title")
+        div.input
+            textarea(type="body", name="user", cols="40", rows="1", placeholder="User")
+        div.input
+            textarea(name="body", cols="40", rows="5", placeholder="Body")
+        div.actions
+            input(type="submit")
+
+    each item in postList
+      .blogpost
+        .title= item.title
+        .user= item.user
+        .body= item.body
+
+
+
+

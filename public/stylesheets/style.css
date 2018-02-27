@@ -1,0 +1,144 @@
+body {
+    font-family: sans-serif;
+    background-image: url("/images/sf_1_darkened_70.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+form {
+	   color:#f2f2f2;
+	   text-align: center;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size:60px;
+    color:#f2f2f2;
+}
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size:30px;
+    color:#f2f2f2;
+}
+
+p {
+	/*margin-left: 20px;*/
+    text-align: center;
+    color:#f2f2f2;
+	font-size: 30px;
+    font-family: sans-serif;
+}
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    left:0;
+    width: 100%; /* Full width */
+    padding:0px 0px 0px 0px;
+}
+#blogtext {
+    padding: 70px;
+}
+#Home { 
+    float:left;
+}
+#About { 
+    float:left;
+}
+#Blog { 
+    float:left;
+}
+.blogpost {
+    text-align: center;
+    color:#f2f2f2;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 30px auto;
+    border: 10px;
+    width: 40%;
+  /*padding-bottom: 25%;*/
+    padding: 20px;
+    background: rgba(242, 242, 242, 0.3)
+}
+.addform {
+    text-align: center;
+    background: rgba(242, 242, 242, 0.3);
+    font-size: 30px;
+    font-family: sans-serif;
+    width: 50%;
+    margin: 0 auto;
+}
+.input {
+    /*box-sizing: border-box;*/
+}
+.blog {
+/*    text-align: center;
+    color:#f2f2f2;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 0 auto;*/
+    /*width: 100%;*/
+}
+.title {
+    font-size: 30px;
+}
+.user {
+    font-size: 16px;
+}
+.body {
+    font-size: 20px;
+}
+/*.abouttext {
+	font-size: 10px;
+}*/
+/*#Resume { 
+    float:right;
+}
+#About { 
+    float:right;
+}
+#Github { 
+    float:right;
+}*/
+img {
+    border-radius: 50%;
+    height: 15%;
+    width: 15%;
+    display: block;
+    padding: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    /*transform: rotate(-90deg);*/
+}
+
+
+
+/* Links inside the navbar */
+.navbar a {
+    /*float: left;*/
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 25px;
+    text-decoration: none;
+    float:right;
+}
+
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+
+#main {
+   position: relative;
+}
