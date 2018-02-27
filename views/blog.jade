@@ -12,6 +12,13 @@ block content
       h1 Blog
       p.
        More stuff by me.
+
+    h2 Delete all posts
+
+    form(name="delpost", method="post", class = "addform", action = "/blog/delete")
+        div.actions
+            input(type="submit", text = "delete")
+
     h2 Make a post
     form(name="makepost", method="post", class = "addform", action = "/blog")
         div.input

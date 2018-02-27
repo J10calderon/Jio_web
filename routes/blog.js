@@ -51,7 +51,16 @@ res.redirect('/blog')
 });
 
 
-
+//Delete all posts
+router.post('/delete', function(req, res, next) {
+var del = "DELETE FROM posts";
+var query = con.query(del, function(err, result) {
+    if (err) throw err;
+    console.log("POSTS DELETED");
+});
+console.log(query.sql); 
+res.redirect('/blog')
+});
 
 
 module.exports = router;
