@@ -10,8 +10,19 @@ var users = require('./routes/users');
 var home = require('./routes/home');
 var about = require('./routes/about');
 var blog = require('./routes/blog');
+var login = require('./routes/login');
 
 var app = express();
+
+//login stuff
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+// var session = require('express-session');
+// app.use(session({secret: 'ssshhhhh'}));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//login stuff above 
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,6 +41,7 @@ app.use('/users', users);
 app.use('/home', home);
 app.use('/about', about);
 app.use('/blog', blog);
+app.use('/login', login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

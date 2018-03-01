@@ -74,17 +74,8 @@ p {
     width: 50%;
     margin: 0 auto;
 }
-.input {
-    /*box-sizing: border-box;*/
-}
-.blog {
-/*    text-align: center;
-    color:#f2f2f2;
-    font-size: 30px;
-    font-family: sans-serif;
-    margin: 0 auto;*/
-    /*width: 100%;*/
-}
+
+
 .title {
     font-size: 30px;
 }
@@ -94,18 +85,7 @@ p {
 .body {
     font-size: 20px;
 }
-/*.abouttext {
-	font-size: 10px;
-}*/
-/*#Resume { 
-    float:right;
-}
-#About { 
-    float:right;
-}
-#Github { 
-    float:right;
-}*/
+
 img {
     border-radius: 50%;
     height: 15%;
@@ -114,14 +94,12 @@ img {
     padding: 100px;
     margin-left: auto;
     margin-right: auto;
-    /*transform: rotate(-90deg);*/
 }
 
 
 
 /* Links inside the navbar */
 .navbar a {
-    /*float: left;*/
     display: block;
     color: #f2f2f2;
     text-align: center;
