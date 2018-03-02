@@ -9,12 +9,26 @@ block content
       a(href='/blog' id = 'Blog') Blog
       a(href='https://github.com/J10calderon' id = 'Github') Github
       a(href='https://www.linkedin.com/in/jio-calderon-2782b8156/' id = 'Linkedin') LinkedIn
-    #blogtext
-      h1 Log In
-    form(name="loginform", method="post", class = "addform", action = "/blog")
-        div.input
-            input(type="text", name="username", placeholder="Username")
-        div.input
-            input(type="text", name="password", placeholder= "Password")
-        div.actions
-            input(type="submit")
+
+
+
+  head
+    title Express authentication example
+  body
+    h1 Sign-in to this Express authentication example
+    p Use <i>user</i> for the username and <i>pass</i> for the password.
+    form(method='post', action = '/login')
+      p
+        label(for='username') Username
+        input(type='text', name='username')
+      p
+        label(for='password') Password
+        input(type='password', name='password')
+      input(type='submit')
+
+
+    form(method='get', action = '/logout')
+      input(type='submit')
+      
+    - each message in flash
+      h4(style="color: orange;") #{message}

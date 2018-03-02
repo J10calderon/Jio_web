@@ -36,7 +36,9 @@ block content
         .title= item.title
         .user= item.user
         .body= item.body
-
+        
+    - each message in flash
+      h4(style="color: orange;") #{message}
 
 
 

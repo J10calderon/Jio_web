@@ -4,7 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var flash = require('req-flash');
 
+//routes
 var index = require('./routes/index');
 var users = require('./routes/users');
 var home = require('./routes/home');
@@ -16,26 +19,68 @@ var app = express();
 
 //login stuff
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
-// var session = require('express-session');
-// app.use(session({secret: 'ssshhhhh'}));
+// var express = require('express');
+
+// var port = 8999;
+// var port = 3000;
+
+// var app = express.createServer();
+
+
+//checkauth
+// app.use(function (req, res, next) {
+// 	console.log('checkAuth ' + req.url);
+
+// 	// don't serve /secure to those not logged in
+// 	// you should add to this list, for each and every secure url
+// 	if (req.url === '/secure' && (!req.session || !req.session.authenticated)) {
+// 		res.render('unauthorized', { status: 403 });
+// 		return;
+// 	}
+// });
+
+
+
+
+
+
+	// next();// do i need this
+
+
+
+
+// // app.use(express.cookieParser());
+
+
+app.use(session({ secret: 'example' }));
+// // app.use(express.bodyParser());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 // app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: true}));
+app.use(flash());
+// // app.use(checkAuth);
+// // app.use(app.router);//do i need this
+// // app.set('view engine', 'jade');
+// app.set('view options', { layout: false });
+
+
+
+// require('./lib/routes.js')(app);
+
+// app.listen(port);
+// console.log('Node listening on port %s', port);
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //login stuff above 
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));//use a static middleware..
-
 app.use('/', index);
 app.use('/users', users);
 app.use('/home', home);
@@ -62,3 +107,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
