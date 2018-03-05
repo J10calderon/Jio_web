@@ -9,24 +9,25 @@ block content
       a(href='https://github.com/J10calderon' id = 'Github') Github
       a(href='https://www.linkedin.com/in/jio-calderon-2782b8156/' id = 'Linkedin') LinkedIn
 
-    img.portrait(src="/images/flower_pic_1.jpg")
 
-    h1 Blog
-    p.
-      More stuff by me.
-    each item in postList
-      .blogpost
-        .title= item.title
-        .user= item.user
-        .body= item.body
+    h2 Delete all posts
 
-    h2 Make or Delete posts if logged in
+    form(name="delpost", method="post", action = "/edit/delete")
+        div.actions
+            input(type="submit", text = "delete")
 
-
-
-    form(name="go_edit", method="post", action = "/blog")
+    h2 Make a post
+    form(name="makepost", method="post", action = "/edit")
+        div.input
+            textarea(type="body", name="title", cols="40", rows="1", placeholder="Title")
+        div.input
+            textarea(type="body", name="user", cols="40", rows="1", placeholder="User")
+        div.input
+            textarea(name="body", cols="40", rows="5", placeholder="Body")
         div.actions
             input(type="submit")
+
+
 
     - each message in flash
       h4(style="color: orange;") #{message}

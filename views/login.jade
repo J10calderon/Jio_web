@@ -1,34 +1,27 @@
 extends layout
 block content
-  body
     .navbar
-      a(href='/home' id = 'Home') Jio
+      a(href='/home' id = 'Home') Home
+      a(href='/login' id = 'Login') Login
       a(href='/files/JioCalderonResume.pdf' id = 'Resume') Resume
       a(href='/about' id = 'About') About
-      a(href='/login' id = 'Login') Login
       a(href='/blog' id = 'Blog') Blog
       a(href='https://github.com/J10calderon' id = 'Github') Github
       a(href='https://www.linkedin.com/in/jio-calderon-2782b8156/' id = 'Linkedin') LinkedIn
 
-
-
-  head
-    title Express authentication example
-  body
-    h1 Sign-in to this Express authentication example
-    p Use <i>user</i> for the username and <i>pass</i> for the password.
+    h1 Sign in
     form(method='post', action = '/login')
       p
         label(for='username') Username
-        input(type='text', name='username')
+        input(type='text', name='username', placeholder = 'username')
       p
         label(for='password') Password
-        input(type='password', name='password')
+        input(type='password', name='password', placeholder = 'password')
       input(type='submit')
 
-
-    form(method='get', action = '/logout')
+    h1 Sign out
+    form(method='get', action = '/login/logout')
       input(type='submit')
-      
+
     - each message in flash
       h4(style="color: orange;") #{message}

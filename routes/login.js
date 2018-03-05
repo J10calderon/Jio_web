@@ -20,7 +20,7 @@ router.post('/', function (req, res, next) {
 		res.redirect('/login');
 
 	} else {
-		req.flash('unsuccesful_login', 'Username and password are incorrect');
+		req.flash('unsuccesful_login', 'Username and password are incorrect.');
 		res.redirect('/login');
 		// res.send('login unsuccesful');
 	}
@@ -29,7 +29,8 @@ router.post('/', function (req, res, next) {
 
 router.get('/logout', function (req, res, next) {
 	delete req.session.authenticated;
-	res.redirect('/');
+	req.flash('successful_logout', 'This session is now not authenticated.');
+	res.redirect('/login');
 });
 
 module.exports = router;
