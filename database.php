@@ -9,4 +9,3 @@
     'prefix'    => '',
     'strict'    => false,
 ],
-mysql://bdb9251984c9eb:bd5bed02@us-cdbr-iron-east-05.cleardb.net/heroku_877da820785f190?reconnect=true
