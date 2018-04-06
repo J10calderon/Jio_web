@@ -16,8 +16,9 @@ var sqlpost = 'INSERT INTO posts (title, body, user) VALUES ("'+ req.body.title 
 if (req.session.authenticated){
   db.getConnection(function(err, connection){
     if (err) throw err;
-    var query = connection.query(sqlpost, function(queryErr, result) {
-      if (queryErr) throw err;
+    console.log("Connected!");
+    var query = connection.query(sqlpost, function(err, result) {
+      if (err) throw err;
       console.log("1 record inserted");
     });
   });
@@ -35,6 +36,7 @@ router.post('/delete', function(req, res, next) {
   if (req.session.authenticated){
     db.getConnection(function(err, connection){
       if (err) throw err;
+      console.log("Connected!");
       var query = connection.query(del, function(err, result){
         if (err) throw err;
         console.log("POSTS DELETED");
