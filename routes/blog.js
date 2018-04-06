@@ -6,17 +6,19 @@ var router = express.Router();
 var app = express();
 app.set('view engine', 'jade');
 var db = require('../db');
-var con = mysql.createConnection({
-  host: "us-cdbr-iron-east-05.cleardb.net",
-  user: "bdb9251984c9eb",
-  password: "bd5bed02",
-  database: 'heroku_877da820785f190'
-});
+// var con = mysql.createConnection({
+//   host: "us-cdbr-iron-east-05.cleardb.net",
+//   user: "bdb9251984c9eb",
+//   password: "bd5bed02",
+//   database: 'heroku_877da820785f190'
+// });
 
 router.get('/', function(req, res) {
 var postList = [];
 	var queryString = 'SELECT title,body,user FROM posts LIMIT 100';
-	con.query(queryString, function(err, rows, fields){
+  db.getConnection((err, connection) => {
+    if (err) throw err;
+	connection.query(queryString, function(err, rows, fields){
 	    if (err) {
 	    	res.status(500).json({"status_code": 500,"status_message": "internal server error"});
 	    } else {
@@ -33,7 +35,7 @@ var postList = [];
 	});
 
 });
-
+});
 
 router.post('/', function (req, res, next) {
 	console.log(req.body);
