@@ -21,8 +21,9 @@ if (req.session.authenticated){
       if (err) throw err;
       console.log("1 record inserted");
     });
+  console.log(query.sql);
   });
-  console.log(query.sql); 
+
 res.redirect('/blog');
 } else {
     req.flash('not_authorized', 'Not authorized to do that.');
@@ -41,8 +42,9 @@ router.post('/delete', function(req, res, next) {
         if (err) throw err;
         console.log("POSTS DELETED");
       })
+  console.log(query.sql); 
     })
-console.log(query.sql); 
+
 res.redirect('/blog');
   } else {
     req.flash('not_authorized', 'Not authorized to do that.');
