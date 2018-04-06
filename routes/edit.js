@@ -6,12 +6,6 @@ var router = express.Router();
 var app = express();
 app.set('view engine', 'jade');
 var db = require('../db');
-// var con = mysql.createConnection({
-//   host: "us-cdbr-iron-east-05.cleardb.net",
-//   user: "bdb9251984c9eb",
-//   password: "bd5bed02",
-//   database: 'heroku_877da820785f190'
-// });
 
 router.get('/', function(req, res, next) {
   res.render('edit', { flash: req.flash() } ); //renders the correspondign jade. 
@@ -20,39 +14,40 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 var sqlpost = 'INSERT INTO posts (title, body, user) VALUES ("'+ req.body.title + '", "'+ req.body.body +'", "' +req.body.user+'")';
 if (req.session.authenticated){
-  db.getConnection((err, connection) => {
+  db.getConnection(function(err, connection){
     if (err) throw err;
-var query = connection.query(sqlpost, function(err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-});
-console.log(query.sql); 
+    var query = connection.query(sqlpost, function(queryErr, result) {
+      if (queryErr) throw err;
+      console.log("1 record inserted");
+    });
+  });
+  console.log(query.sql); 
 res.redirect('/blog');
 } else {
-		req.flash('not_authorized', 'Not authorized to do that.');
-		res.redirect('/edit');
+    req.flash('not_authorized', 'Not authorized to do that.');
+    res.redirect('/edit');
 }
-};
 });
 
-//Delete all posts
+
 router.post('/delete', function(req, res, next) {
-var del = "DELETE FROM posts";
-if (req.session.authenticated){
-  db.getConnection((err, connection) => {
-    if (err) throw err;
-var query = connection.query(del, function(err, result) {
-    if (err) throw err;
-    console.log("POSTS DELETED");
-});
+  var del = "DELETE FROM posts";
+  if (req.session.authenticated){
+    db.getConnection(function(err, connection){
+      if (err) throw err;
+      var query = connection.query(del, function(err, result){
+        if (err) throw err;
+        console.log("POSTS DELETED");
+      })
+    })
 console.log(query.sql); 
 res.redirect('/blog');
-}) else {
-		req.flash('not_authorized', 'Not authorized to do that.');
-		res.redirect('/edit');
-}
-};
-  });
+  } else {
+    req.flash('not_authorized', 'Not authorized to do that.');
+    res.redirect('/edit');
+  }
+})
+  
 
 
 module.exports = router;

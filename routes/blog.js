@@ -16,7 +16,7 @@ var db = require('../db');
 router.get('/', function(req, res) {
 var postList = [];
 	var queryString = 'SELECT title,body,user FROM posts LIMIT 100';
-  db.getConnection((err, connection) => {
+   db.getConnection(function(err, connection){
     if (err) throw err;
 	connection.query(queryString, function(err, rows, fields){
 	    if (err) {
