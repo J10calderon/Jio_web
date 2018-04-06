@@ -47,7 +47,7 @@ var query = connection.query(del, function(err, result) {
 });
 console.log(query.sql); 
 res.redirect('/blog');
-} else {
+}) else {
 		req.flash('not_authorized', 'Not authorized to do that.');
 		res.redirect('/edit');
 }
